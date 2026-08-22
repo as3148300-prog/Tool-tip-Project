@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #18181b;
+  --muted-text: #52525b;
+  --border-color: #e4e4e7;
+  --card-bg: #f4f4f5;
+  --hover-bg: #f4f4f5;
+
+  --demo-bg: #ffffff;
+  --demo-header-bg: #fafafa;
+}
+
+[data-theme="dark"] {
+  --bg-color: #09090b;
+  --text-color: #f4f4f5;
+  --muted-text: #a1a1aa;
+  --border-color: #3f3f46;
+  --card-bg: #18181b;
+  --hover-bg: #27272a;
+
+  --demo-bg: #18181b;
+  --demo-header-bg: #27272a;
+}
+
+/* Global page */
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Make common Tailwind gray text theme-aware */
+
+[data-theme="dark"] .text-gray-500 {
+  color: var(--muted-text) !important;
+}
+
+[data-theme="dark"] .text-gray-600 {
+  color: var(--muted-text) !important;
+}
+
+[data-theme="dark"] .text-gray-700 {
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .text-gray-800 {
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .text-gray-900 {
+  color: var(--text-color) !important;
+}
+
+/* Borders */
+
+[data-theme="dark"] .border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .divide-gray-200 > :not(:last-child) {
+  border-color: var(--border-color) !important;
+}
+
+/* Common light backgrounds */
+
+[data-theme="dark"] .bg-gray-50 {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .bg-gray-100 {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .bg-gray-200 {
+  background-color: var(--hover-bg) !important;
+}
+
+/* Hover backgrounds */
+
+[data-theme="dark"] .hover\:bg-gray-50:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+[data-theme="dark"] .hover\:bg-gray-100:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+[data-theme="dark"] .hover\:bg-gray-200:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .text-black {
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .border-gray-300 {
+  border-color: var(--border-color) !important;
+}
+/* Input / form colors */
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .text-gray-400 {
+  color: var(--muted-text) !important;
+}
+
+[data-theme="dark"] .border-gray-300 {
+  border-color: var(--border-color) !important;
+}
+/* Carousel arrows - dark mode */
+
+[data-theme="dark"] .carousel-control-prev,
+[data-theme="dark"] .carousel-control-next {
+  background-color: rgba(39, 39, 42, 0.9) !important;
+}
+
+[data-theme="dark"] .carousel-control-prev:hover,
+[data-theme="dark"] .carousel-control-next:hover {
+  background-color: #3f3f46 !important;
+}
+
+[data-theme="dark"] .carousel-control-prev svg,
+[data-theme="dark"] .carousel-control-next svg {
+  color: #f4f4f5 !important;
+}
+/* Hover border */
+
+[data-theme="dark"] .hover\:border-gray-400:hover {
+  border-color: #52525b !important;
+}
+/* Form elements */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
